@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //Person.prototype --原型  上来自身就有
+    //Person.prototype ={} 是祖先
+//    Person.prototype.Lstname='你好'
+//    Person.prototype.say=function(){
+//        console.log('hehe')
+//    }
+//    function Person(name,age,sex){
+//        this.name=name;
+//        this.age=age;
+//        this.sex=sex;
+//    }
+//    var person=new Person();
+
+//    Car.prototype.lang=100;
+//    Car.prototype.weight=100;
+    Car.prototype={
+        lang:100,
+        weight:100
+    }
+    function Car(color,owner){
+        this.owner=owner;
+        this.color=color;
+//
+//        this.lang=1400;
+//        this.weight=100;
+
+    }
+    var Car1=new Car(); //每次=》this.lang=1400;  都会执行  优化方法提取到 prototype
+    var Car2=new Car();
+    delete Car.prototype.lang
+
+</script>
+</body>
+</html>

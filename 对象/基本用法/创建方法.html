@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+1.var obj={} plainObject 对象字面量 /对象直接量
+2.构造函数
+-1 系统自带的构造函数 Object();
+-2 自定义
+var obj=new Object();
+var obj={}
+//构造函数 大驼峰
+<script>
+function Car(color){
+    this.color=color,
+    this.name='bmw';
+    this.height='1400';
+    this.lang='4200';
+    this.weight='100';
+    this.health=100;
+    this.fun=function(){
+        this.health--;
+    }
+}
+    //独立性
+    var car1=new Car('红色');
+    var car2=new Car();
+
+    car1.name='法拉利'
+
+    car2.name='兰博基尼'
+
+</script>
+</body>
+</html>

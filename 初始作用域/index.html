@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+//    function sum(a,b,c,d){
+//        if(sum.length>arguments.length){
+//            console.log('形参多了')
+//        }else{
+//            console.log("实参多了")
+//        }
+//        console.log(arguments)
+//    }
+//    sum(1,2,3)
+    //任一个数求和
+    function sum(){ //不定参数
+        var result=0;
+        for(var i=0;i<arguments.length;i++){
+            result+=arguments[i]
+        }
+        console.log(result)
+    }
+    sum(1,2,3)
+    function test(){
+        console.log('aaa');
+        return 123; //函数里默认有返回；
+        console.log('sss');
+    }
+    test();
+
+    function myNumber(target){
+        return +target;
+    }
+    var num=myNumber('123')
+    console.log(num+"----"+typeof num)
+</script>
+</body>
+</html>

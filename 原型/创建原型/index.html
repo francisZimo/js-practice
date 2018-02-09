@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var obj={name:'nihao'}
+    obj1=Object.create(obj);
+    obj2=Object.create(null)
+    function test(){
+        this.name='nihao'
+    }
+    test()
+</script>
+</body>
+</html>

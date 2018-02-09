@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var obj={
+        name:'12',
+        age:123,
+        sex:'male',
+        height:180,
+        weight:75,
+        __proto__:{
+            lastName:'等'
+        }
+    }
+    Object.prototype.abc=123;
+    for(var prop in obj){
+        //obj.hasOwnProperty(prop)//排除原型 返回布尔型
+        if(obj.hasOwnProperty(prop)){
+            console.log(prop+' '+obj[prop])
+        }else{
+            console.log('不是自身的: '+obj[prop])
+        }
+
+    }
+</script>
+</body>
+</html>

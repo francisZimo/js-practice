@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //实现公有变量
+    function add(){
+        var num=100;
+        function b(){
+            num++;
+            console.log(num)
+        }
+        return b;
+    }
+    var demo=add();
+    demo();
+    demo();
+    demo();
+    demo();
+    demo();
+    demo();
+</script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //只能被1和本身被整除
+    let count=0;
+//    for(var i=0;i<100;i++){
+//        for(var j=1;j<=i;j++){
+//            if(i%j==0){
+//                count++;
+//            }
+//        }
+//        if(count==2){
+//            document.write(i+'  ')
+//        }
+//        count=0;
+//    }
+    //平方数之下的方法
+    for(var i=0;i<100;i++){
+        for(var j=1;j<=Math.sqrt(i);j++){
+            if(i%j==0){
+                count++;
+            }
+        }
+        if(count==1){
+            document.write(i+'  ')
+        }
+        count=0;
+    }
+
+</script>
+</body>
+</html>

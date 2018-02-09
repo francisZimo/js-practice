@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+我们知道引用类型的赋值其实是改变了变量的指向，那么如果在需要拷贝的对象中存在某个属性的值是引用类型，如数组或子对象，那么浅拷贝后的原对象的属性获得的也只是这个指向
+
+所以如果改变被拷贝对象的属性值，那么原对象的相应属性也会跟着改变
+<script>
+
+    function lightCopy(target){
+        if(typeof target!=='object') return ;
+        var result=target.constructor===Array?[]:{};
+        for(var key in target){
+            if(target.hasOwnProperty(key)){
+                console.log(key)
+                result[key]=target[key]
+            }
+        }
+        return result;
+    }
+    var array1=[['小丽',23],2,3,4,5]
+    var array2=array1;
+    var obj1={
+        name:'小明',
+        age:20,
+        sex:'male',
+        wife:{
+            name:'笑话',
+            height:'180'
+        },
+        __proto__:{
+            lastName:'王'
+        }
+    }
+    var resultArray=lightCopy(array1);
+    var resultObj1=lightCopy(obj1)
+</script>
+</body>
+</html>

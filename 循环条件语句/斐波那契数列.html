@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // 1f 1s 2t
+
+    var n=parseInt(window.prompt('输入斐波那契数列第几位'))
+    var first= 1,
+        second= 1,
+            third;
+
+    if(n<=2){
+        document.write('目标位'+1)
+    }else{
+        for(var i=0;i<=n-2;i++){
+            third=first+second;
+            first=second;
+            second=third;
+        }
+        document.write('目标位'+third)
+    }
+
+</script>
+</body>
+</html>

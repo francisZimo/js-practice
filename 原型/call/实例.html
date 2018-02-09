@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function wheel(wheelsize){
+        this.wheelsize=wheelsize
+    }
+    function sit(color){
+        this.color=color
+    }
+    function model(height){
+        this.height=height
+    }
+    function Car(wheelsize,color,height){
+        wheel.call(this,wheelsize)
+        sit.call(this,color)
+        model.call(this,height)
+    }
+    var car =new Car(100,'blue','40米');
+</script>
+</body>
+</html>

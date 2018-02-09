@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //递归  找规律 找出口
+    //比如n的阶层 n!=n*(n-1)
+    //jc(5);
+    //jc(5)==>5*jc(4)
+    //jc(4)==>4*jc(3)
+    //..
+    //jc(2)=2*jc(1)
+    //jc(1)=1
+
+    function jc(val){
+        if(val==1){
+            return 1;
+        }
+        return jc(val-1)*val
+    }
+    document.write(jc(4))
+    //斐波那契数列
+//    function feibo(val){
+//        var first=1;
+//        var second=1;
+//        var third;
+//        if(val>2){
+//            for(var i=0;i<(val-2);i++){
+//                third=first+second;
+//                first=second;
+//                second=third;
+//            }
+//        }else{
+//            third=1;
+//        }
+//        document.write("斐波那契数列第"+val+'位为：'+third);
+//    }
+//    var value1=window.prompt('输入斐波那契数列第几位')
+//    feibo(value1)
+    //递归斐波那契数列 第几位 f(n)=f(n-2)+f(n-1) //直到 n=3 f()
+    function feibo1(val){
+        if(val<3){
+            return 1;
+        }
+        return feibo1(val-2)+feibo1(val-1)
+
+    }
+    var feibovalue=window.prompt('输入斐波那契数列第几位');
+    document.write("斐波那契数列第"+feibovalue+'位为:'+feibo1(feibovalue))
+
+</script>
+</body>
+</html>

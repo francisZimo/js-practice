@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+下列选项console.log(1,2,3,4,5)的选项是?
+<script>
+    //A
+//    function foo(x){
+//        console.log(arguments)
+//        return x
+//    }
+//    foo(1,2,3,4,5)
+//
+//    //b
+//    function foo1(x){ //var _foo1=function(x){}
+//        console.log(arguments)
+//        return x
+//    }(1,2,3,4,5)
+//    (function (){console.log('ss')})()
+    //c
+    (function demo(x){
+        console.log(arguments);
+        return x
+    }(1,2,3,4,5))
+//    (function foo21(x){console.log(x)})(2)
+</script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    Grand.prototype.lastName='邓'
+    function Grand(){
+
+    }
+    var grand=new Grand();
+    Father.prototype=grand;
+    function Father(){
+        this.name='小明'
+    }
+
+    var father=new Father();
+    Son.prototype=father;
+    function Son(){
+        this.habbit='somke'
+    }
+    var son=new Son();
+    son.toString();
+
+
+</script>
+</body>
+</html>

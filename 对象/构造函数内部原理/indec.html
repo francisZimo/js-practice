@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function Person(name,height){
+        //var this={};
+        this.name=name;
+        //{
+        // name:name
+        //}
+        this.height=height;
+        this.say=function(){
+            console.log(this.name);
+        }
+        //return this;
+    }
+   new Person('xiaoming',180).say()
+
+    var num=new Number(123);
+    num.abc='你好'
+    console.log(typeof num);
+    num=num*2;
+    console.log(typeof num)
+    var str=new String('abcd')
+
+    var str='abcd';
+    str.length=2;
+    console.log('字符串初始值:'+str)
+    var array=[1,2,3,4,5,6]
+    array.length=2;
+    console.log("数组:"+array)
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var xiaoming={
+        name:'Fran',
+        age:20,
+        girlFriend:'小黄',
+        wife:'',
+        prepareWife:'小彩',
+        song:function(){
+            console.log('唱一首歌')
+        },
+        song1:function(){
+            console.log("星星点灯")
+        },
+        getMarried:function(){
+
+            this.wife=this.girlFriend;
+        },
+        devorce:function(){
+            delete this.wife;
+//            this.wife=this.prepareWife;
+        },
+        changeGF:function(someone){
+            this.girlFriend=someone
+        }
+    }
+    //增
+    xiaoming.wife='小丽';
+    //删除
+    delete(xiaoming.song1)
+    //改
+//    xiaoming.changeGF('林志玲');
+
+
+
+</script>
+</body>
+</html>

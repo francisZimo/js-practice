@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // A instanceof B  A对象 是不是 B构造函数构造出来的
+    //重点==》  看A对象的原型链上有没有B的原型
+    // person instanceof Person
+    //判断是数组还是对象
+
+
+    //1.数组的constructor 对象的constructor
+    function demo1(){
+        this.name='小明'
+    }
+    var demo2=new demo1();
+//    console.log(demo2.constructor==demo1)
+//    console.log([].constructor)
+//    var obj1={}
+//    console.log(obj1.constructor)
+//    if([].constructor==Array){
+//        console.log('是数组')
+//    }
+//    if(obj1.constructor==Object){
+//        console.log("是对象")
+//    }
+    //2.instanceof 判断
+    var a1=[];
+    if(a1 instanceof Array){
+        console.log('是数组')
+    }
+    if(demo2 instanceof Object){
+        console.log('是对象')
+    }
+    //3.toString
+    var s='123'
+    console.log(s.indexOf('2'))
+    console.log(Object.prototype.toString.call([]))
+    console.log(Object.prototype.toString.call([]).indexOf('Array'))
+    console.log(Object.prototype.toString.call(123).indexOf('Number'))
+    console.log(Object.prototype.toString.call({}).indexOf('Object'))
+</script>
+</body>
+</html>

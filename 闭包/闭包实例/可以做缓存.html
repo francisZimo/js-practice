@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //可以做存储(存储结构)
+    function test(){
+        var num=100;
+        function a(){
+            num++;
+            console.log(num);
+        }
+        function b(){
+            num--;
+            console.log(num)
+        }
+        return [a,b];
+
+    }
+    var myArr=test();
+    myArr[0]();
+    myArr[1]();
+    //真实缓存
+    function enter(){
+        var food="";
+        var obj={
+            eat:function(){
+                console.log("i am eating"+food)
+                food='';
+            },
+            push:function(myFood){
+                food=myFood;
+            }
+        }
+        return obj;
+    }
+    var eater1=eater();
+    eater1.push('banana');
+    eater1.eat();
+
+</script>
+
+</body>
+</html>

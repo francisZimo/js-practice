@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function Deng(name,wife){
+        this.name=name;
+        this.wife=wife;
+        var perpareWife='xiaozhang' //==>perpareWife 私有化变量
+        this.divorce=function(){
+            this.wife=perpareWife;
+        }
+        this.changePrepareWife=function(target){
+            perpareWife=target;
+        }
+        this.sayPrepareWife=function(){
+            console.log(perpareWife)
+        }
+    }
+    var deng=new Deng('deng','老刘','小丽')
+    //deng.prepareWife 是访问不到的
+
+</script>
+</body>
+</html>

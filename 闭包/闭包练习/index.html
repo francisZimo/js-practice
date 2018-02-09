@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+//解析步骤
+执行时候的作用域链条 才是真正的作用域链 doing
+所有a.AO都是一个人 所有b.AO都是一个人
+1.a defined a.[[scope]]-->0:GO
+GO{
+    a:function a(){...}
+}
+2.a doing a.[[scope]]--> 0:a.AO
+                         1:GO
+a.AO{
+    b:function b(){},
+    aaa:123
+}
+3.b defined b.[[scope]]--> 0:a.AO
+                            1:GO
+
+b doing b.[[scope]]-->  0:b.AO
+                        1:a.AO
+                        2:GO
+当a执行完的时候 a.AO 失去连接-----b defined 还存在
+
+<script>
+    function a(){
+        function b(){
+            var bbb=234;
+            console.log(aaa)
+        }
+        var aaa=123;
+        return b;
+    }
+    var glob=100;
+    var demo=a();
+    demo();
+</script>
+</body>
+</html>

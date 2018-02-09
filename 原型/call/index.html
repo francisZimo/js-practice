@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function Person(name,age,sex){
+        this.name=name;
+        this.age=age;
+        this.sex=sex;
+    }
+    function Student(name,age,sex,grade){
+        Person.call(this,name,age,sex)
+        this.grade=grade;
+    }
+    var student=new Student('小丽',20,'male',2017)
+</script>
+</body>
+</html>

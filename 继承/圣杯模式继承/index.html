@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //yahoo  建议这个
+//    function inherit(){
+//        function F(){}
+//        return function(Target,Origin){
+//            F.prototype=Origin.prototype;
+//            Target.prototype=new F();
+//            Target.prototype.constructor=Target; //constructor指向自身
+//            Target.prototype.uber=Origin.prototype
+//        }
+//
+//    }
+    //圣杯模式
+    function inherit(Target,Origin){
+        function F(){}
+        F.prototype=Origin.prototype;
+        Target.prototype=new F();
+        Target.prototype.constructor=Target; //constructor指向自身
+        Target.prototype.uber=Origin.prototype
+    }
+    Father.prototype.lastName='老刘';
+    function Father(){}
+    function Son(){}
+    inherit(Son,Father);
+    var son=new Son();
+    var father=new Father();
+
+</script>
+</body>
+</html>

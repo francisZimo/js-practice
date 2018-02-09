@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+//    var str='abc';
+//    str+=1;
+//    var test=typeof (str);
+//    if(test.length==6){
+//        test.sign='typeof的返回结果可能是String'
+//    }
+//    console.log(test.sign)
+    function Person(name,age,sex){
+        var a=0;
+        this.name=name;
+        this.age=age;
+        this.sex=sex;
+        function sss(){
+            a++;
+            document.write(a);
+        }
+        this.say=sss;
+    }
+    var oPerson = new Person();
+    oPerson.say();
+    oPerson.say();
+    var oPerson1=new Person();
+    oPerson1.say();
+
+
+</script>
+</body>
+</html>
